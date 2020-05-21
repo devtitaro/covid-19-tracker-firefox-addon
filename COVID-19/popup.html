@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>COVID-19 Tracker</title>
+
+    <!-- Load the popup stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/popup.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="head-con">
+            <div class="text">COVID-19 TRACKER</div>
+            <div class="covid-img">
+                <img src="./assets/img/covid19.png" alt="covid-19" id="flag">
+            </div>
+            <div class="cases-con"></div>
+        </div>
+    </header>
+
+    <!-- Spinner -->
+    <!-- Spinners are removed in runtime -->
+    <div id="covid-spinners" class="spin-con">
+        <div class="spin"><div class="lds-ripple"><div></div><div></div></div></div>
+        <div class="spinner-text"></div>
+    </div>
+
+    <!-- Main content -->
+    <main>
+        <!-- Main content are added during runtime -->
+    </main>
+        
+    <!-- Footer -->
+    <footer>
+        <div class="foot-con">
+            <div class="coffee">
+                <img src="assets/img/coffee.png" alt="coffee">
+            </div>
+        </div>
+    </footer>
+</body>
+    <!-- Load the jquery library -->
+    <script src="lib/jquery.min.js"></script>
+
+    <!-- Load the reausable library -->
+    <script src="lib/reusable.js"></script>
+
+    
+    <!-- Load the covid-19 js file -->
+    <script src="api/covid-19.js"></script>
+
+    <!-- Load the popup js file -->
+    <script src="popup.js"></script>
+</html>

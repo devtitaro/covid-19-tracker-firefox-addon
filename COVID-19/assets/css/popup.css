@@ -1,0 +1,288 @@
+/**
+ * 
+ * @Author: titaro
+ * @FB: facebook.com/tyroklonejr
+ * @Twitter: twitter.com/tyroklonejnr
+ * 
+ * @License: GNU General Public License version 3.0 
+ */
+
+
+*,
+*::before,
+*::after
+{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+html
+{
+ font-size: 100%;
+}
+
+body
+{
+ font-family: 'Courier New', Courier, monospace;
+}
+
+/* Scroll bar styling */
+:root
+{
+ scrollbar-face-color: rgb(46, 88, 255); /* Firefox 63 compatibility */
+ scrollbar-track-color: rgb(129, 139, 182); /* Firefox 63 compatibility */
+ scrollbar-color: rgb(46, 88, 255) rgb(129, 139, 182);
+ scrollbar-width: thin;
+}
+
+/* Header styling */
+header div.head-con
+{
+ background-color: rgb(46, 88, 255);
+ background-image: linear-gradient(to bottom right, rgb(46, 88, 255), rgb(129, 139, 182));
+ color: #ffffff;
+ font-size: small;
+ padding: 1.5rem;
+ height: 100%;
+}
+
+header div.head-con div.covid-img img
+{
+ width: 5.5rem;
+ height: 5.5rem;
+ display: block;
+ text-align: center;
+ margin: 3rem auto;
+}
+
+header div.head-con div.text
+{
+ font-weight: 900;
+ font-size: 1rem;
+ text-align: center;
+}
+
+header div.cases
+{
+ background-color: #f9f9f9;
+ padding: .3rem;
+ width: 80%;
+ text-align: center;
+ color: rgb(46, 88, 255);
+ border-radius: 5rem;
+ font-size: x-large;
+ font-weight: bolder;
+ box-shadow: 0 0 1.5rem rgba(11, 12, 12, .5);
+ margin: 3rem auto;
+ margin-top: -1.5rem;
+}
+
+header div.cases-label
+{
+ color: rgb(34, 173, 52);
+}
+
+
+header div.head-con #flag-con
+{
+ overflow: hidden;
+ position: relative;
+}
+
+header div.head-con #flag-con img
+{
+ width: 5.5rem;
+ height: 5.5rem;
+ overflow: hidden;
+}
+
+header div.head-con #flag-con div.covid-img-text
+{
+ background-color: rgba(11, 12, 12, .5);
+ color: #ffffff;
+ padding: .3rem;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ text-align: center;
+ width: 5.625rem;
+ height: 5.625rem;
+ border-radius: 50%;
+ margin-bottom: 30px;
+ transform: translate(-50%, -50%);
+ font-size: x-large;
+ font-weight: bolder;
+ box-shadow: 0 0 1.5rem rgba(11, 12, 12, .5);
+ text-transform: uppercase;
+ cursor: pointer;
+}
+
+header div.head-con #flag-con div.covid-img-text:hover
+{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: all .3s;
+}
+
+header div.head-con #flag
+{
+ transition: all 0.3s linear;
+ border-radius: 50%;
+ width: 8.125rem;
+ height: 8.125rem;
+}
+
+header div.head-con p.cases-count
+{
+ text-transform: uppercase;
+ font-size: .9rem;
+ font-weight: 900;
+ background-color: rgb(95, 40, 158);
+ padding: .8rem;
+ border-radius: 5rem 5rem 0 0;
+ color: #ffffff;
+ margin-bottom: .3rem;
+}
+
+header div.head-con p.cases-text
+{
+ text-transform: uppercase;
+ font-size: .8rem;
+ background-color: rgb(129, 139, 182);
+ padding: .8rem;
+ border-radius: 0 0 5rem 5rem;
+ color: #ffffff;
+}
+
+/* Main content styling */
+main
+{
+ margin: 0 1rem;
+}
+
+main table
+{
+ margin: -4rem auto;
+ margin-bottom: 1rem;
+}
+
+main table td div.square
+{
+ background-color: rgb(95, 40, 158);
+ padding: .8rem;
+ color: #ffffff;
+ font-weight: bolder;
+ text-align: center;
+ margin: -1.5rem .5rem;
+ margin-top: 2rem;
+ border-radius: .5rem .5rem 0 0;
+ text-transform: uppercase;
+ text-align: center;
+ box-shadow: 1rem 0 2rem rgba(11, 12, 12, .3);
+
+}
+
+main table td div.cup
+{
+ background-color: rgb(129, 139, 182);
+ padding: 2rem;
+ color: #ffffff;
+ font-size: 1rem;
+ font-weight: 900;
+ text-align: center;
+ margin: 1rem .5rem;
+ text-overflow: clip;
+ border-radius: .5rem .5rem .5rem .5rem;
+ box-shadow: 1rem 0 2rem rgba(11, 12, 12, .5);
+}
+
+
+/* Spiners */
+/* CREDITS TO: loading.io */
+#covid-spinners
+{
+ text-align: center;
+ margin: 2.5rem 5rem;
+ margin-bottom: 5rem;
+ display: block;
+}
+
+#covid-spinners .spinner-text
+{
+ color: transparent;
+ background-image: linear-gradient(to right, rgb(225, 91, 100), rgb(46, 88, 255));
+ -webkit-background-clip: text;
+ background-clip: text;
+ font-size: 1rem;
+ text-transform: uppercase;
+ margin: .5rem auto;
+ font-weight: 900;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid rgb(46, 88, 255);
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+  
+
+/* Footer syling */
+footer
+{
+ margin-top: 3rem;
+}
+
+footer div.foot-con
+{
+ padding: .3rem;
+}
+
+footer div.foot-con .coffee
+{
+ cursor: pointer;
+ background-color: rgb(46, 88, 255);
+ padding: .8rem;
+ width: 4rem;
+ height: 4rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ border-radius: 50%;
+ font-size: .99rem;
+ font-weight: bolder;
+ box-shadow: 0 0 1rem rgba(11, 12, 12, .9);
+ margin: .9rem auto;
+ margin-top: -2rem;
+ text-transform: uppercase;
+}
